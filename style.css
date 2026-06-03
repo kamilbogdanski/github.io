@@ -183,5 +183,94 @@ padding:40px;
 .hero h1{
 font-size:4rem;
 }
+.quote-section{
+    position:relative;
+    padding:180px 80px;
+    overflow:hidden;
+}
 
+.quote-section::before{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
+    border-radius:50%;
+    background:#eadbd1;
+    top:-300px;
+    right:-200px;
+    filter:blur(80px);
+    opacity:.7;
+}
+
+.mini-badge{
+    width:260px;
+    margin:auto;
+    text-align:center;
+    padding:14px;
+    background:#f0ede8;
+    border-radius:8px;
+
+    font-family:'Courier Prime', monospace;
+    font-size:12px;
+
+    position:relative;
+    z-index:2;
+}
+
+.quote{
+    position:relative;
+    z-index:2;
+
+    max-width:1100px;
+    margin:40px auto;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(4rem,7vw,8rem);
+    line-height:.95;
+    font-weight:500;
+}
+
+.quote-desc{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+    margin:50px auto;
+
+    text-align:center;
+
+    font-family:'Courier Prime', monospace;
+    font-size:15px;
+    line-height:1.9;
+}
+
+.stats-grid{
+    margin-top:120px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:60px;
+}
+
+.stat-box h3{
+    background:#8b8978;
+    color:#fff;
+
+    text-align:center;
+
+    padding:40px;
+
+    font-family:'Cormorant Garamond', serif;
+    font-size:2.3rem;
+    font-weight:500;
+
+    margin-bottom:40px;
+}
+
+.stat-box p{
+    font-family:'Courier Prime', monospace;
+    line-height:1.9;
+    text-align:center;
 }
