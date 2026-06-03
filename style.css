@@ -190,7 +190,7 @@ p {
 
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Wymusza dokładnie 2 równe kolumny */
     gap: 1.5rem;
 }
 
