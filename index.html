@@ -1,192 +1,133 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kamil Bogdański</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
---bg:#f6f4f1;
---text:#111;
---accent:#8b8978;
---accent2:#e5d8cf;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-font-family:Inter,sans-serif;
-background:var(--bg);
-color:var(--text);
-line-height:1.7;
-overflow-x:hidden;
-}
-.hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:40px;
-background:linear-gradient(135deg,#f6f4f1,#ece7e1);
-}
-.hero-inner{max-width:900px}
-.hero h1{
-font-family:"Cormorant Garamond",serif;
-font-size:clamp(3rem,8vw,7rem);
-font-weight:500;
-line-height:1;
-margin-bottom:20px;
-}
-.hero p{
-font-size:1.2rem;
-max-width:700px;
-margin:auto;
-color:#444;
-}
-.tagline{
-margin-top:30px;
-letter-spacing:2px;
-text-transform:uppercase;
-font-size:.85rem;
-color:var(--accent);
-}
-section{
-max-width:1200px;
-margin:auto;
-padding:120px 30px;
-}
-.section-title{
-font-family:"Cormorant Garamond",serif;
-font-size:3rem;
-margin-bottom:40px;
-}
-.manifest{
-text-align:center;
-}
-.manifest blockquote{
-font-family:"Cormorant Garamond",serif;
-font-size:clamp(2rem,5vw,4rem);
-line-height:1.15;
-max-width:1000px;
-margin:auto;
-}
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-.card{
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-transition:.3s;
-}
-.card:hover{
-transform:translateY(-8px);
-}
-.stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-text-align:center;
-}
-.stat-number{
-font-size:3rem;
-font-weight:600;
-}
-.about{
-max-width:800px;
-font-size:1.1rem;
-}
-.contact{
-text-align:center;
-padding-bottom:140px;
-}
-.contact a{
-display:inline-block;
-margin:10px;
-text-decoration:none;
-color:var(--text);
-border-bottom:1px solid var(--accent);
-}
-.reveal{
-opacity:0;
-transform:translateY(30px);
-transition:.8s;
-}
-.reveal.visible{
-opacity:1;
-transform:none;
-}
-@media(max-width:768px){
-.stats{grid-template-columns:1fr}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamil Bogdański</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
+    <nav class="navbar">
+
+        <div class="nav-left">
+            <a href="#">Strona główna</a>
+            <a href="#">O mnie</a>
+            <a href="#">Co robię</a>
+            <a href="#">Jak pracuję</a>
+        </div>
+
+        <div class="logo">
+            <img src="assets/logo.png" alt="KB">
+        </div>
+
+        <div class="nav-right">
+            <a href="#">Contact us</a>
+        </div>
+
+    </nav>
+</header>
+
 <section class="hero">
-<div class="hero-inner">
-<h1>Projektuję treści, które budują przewagę konkurencyjną.</h1>
-<p>Łączę SEO, UX Writing i technologię, tworząc komunikację, która wspiera rozwój firm i poprawia doświadczenia użytkowników.</p>
-<div class="tagline">SEO • UX Writing • WordPress • E‑commerce</div>
+
+    <div class="hero-left">
+
+        <h1>
+            Projektuję treści, które karmią algorytmy i inspirują ludzi
+        </h1>
+
+        <div class="underline"></div>
+
+        <p>
+            W świecie zdominowanym przez generyczny content, stawiam na jakość, którą doceniają zarówno ludzie, jak i systemy AI. Optymalizuję architekturę informacji i język korzyści – a wszystko po to, by Twoja komunikacja była płynna, skuteczna i zapamiętywalna.
+        </p>
+
+    </div>
+
+    <div class="hero-right">
+
+        <a href="#" class="discover">
+            Poznaj mnie
+        </a>
+
+    </div>
+
+</section>
+
+<div class="wave">
+<svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+<path fill="#f7f6f4"
+d="M0,96L120,85.3C240,75,480,53,720,58.7C960,64,1200,96,1320,112L1440,128L1440,160L1320,160C1200,160,960,160,720,160C480,160,240,160,120,160L0,160Z"></path>
+</svg>
 </div>
+
+<section class="services">
+
+    <div class="section-label">
+        Moje usługi
+    </div>
+
+    <h2>
+        Skuteczna komunikacja to suma dopracowanych detali.
+        Zobacz, jak mogę pomóc Twojej marce urosnąć
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="shape blob">
+
+            <h3>UX Writing</h3>
+
+            <p>
+                Świetny design przyciąga wzrok, ale to słowa prowadzą użytkownika za rękę. Pomagam markom wypełnić interfejs treścią, która jest intuicyjna, pomocna i ludzka – od mikrocopy na przyciskach, przez komunikaty błędów, aż po puste stany. Dbam o to, by Twój produkt brzmiał równie dopracowanie, jak wygląda. Dla marek, które nie zostawiają doświadczeń użytkownika przypadkowi.
+            </p>
+
+            <a href="#">
+                Dowiedz się więcej
+            </a>
+
+        </div>
+
+        <div class="shape arch">
+
+            <h3>SEO Copywriting</h3>
+
+            <p>
+                Dobry copywriter SEO wie, gdzie ukryć frazę kluczową, by nie zakłócić przyjemności z czytania. Ja idę o krok dalej – tworzę ekosystem treści, który karmi algorytmy i inspiruje odbiorców. Pomagam Twojej marce rozkwitnąć w wynikach wyszukiwania, stawiając na jakość, która broni się sama. Bo najlepsze SEO to takie, którego czytelnik nigdy nie „poczuje”, ale Twoje statystyki – owszem.
+            </p>
+
+            <a href="#">
+                Poznaj moją metodę
+            </a>
+
+        </div>
+
+        <div class="shape gear">
+
+            <h3>Audyty techniczne strony</h3>
+
+            <p>
+                Nawet najpiękniejszy design nie obroni się bez technicznego zaplecza. Mój audyt uwzględnia przegląd trzech filarów: jakości treści, intuicyjności interfejsu oraz optymalizacji konwersji. Sprawdzam, czy Twoja marka komunikuje się jasno i czy użytkownik bez przeszkód dociera do celu. Eliminuję błędy, które kosztują Cię utratę klientów.
+            </p>
+
+            <a href="#">
+                Sprawdź zakres usług
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="manifest reveal">
-<blockquote>
-Widoczność nie jest celem. Jest efektem dobrze zaprojektowanego doświadczenia.
-</blockquote>
-</section>
-
-<section class="reveal">
-<h2 class="section-title">Kompetencje</h2>
-<div class="cards">
-<div class="card"><h3>SEO</h3><p>Strategie widoczności oparte na danych, intencjach użytkowników i jakości treści.</p></div>
-<div class="card"><h3>UX Writing</h3><p>Komunikacja wspierająca decyzje użytkowników i poprawiająca konwersję.</p></div>
-<div class="card"><h3>WordPress</h3><p>Projektowanie oraz optymalizacja stron internetowych i sklepów online.</p></div>
-<div class="card"><h3>E‑commerce</h3><p>Content, struktura i doświadczenia zakupowe wspierające sprzedaż.</p></div>
-</div>
-</section>
-
-<section class="reveal">
-<h2 class="section-title">Doświadczenie</h2>
-<div class="stats">
-<div><div class="stat-number">400k+</div><p>ZZS miesięcznie</p></div>
-<div><div class="stat-number">6+</div><p>Lat doświadczenia</p></div>
-<div><div class="stat-number">100+</div><p>Zrealizowanych projektów</p></div>
-</div>
-</section>
-
-<section class="reveal">
-<h2 class="section-title">O mnie</h2>
-<div class="about">
-Specjalizuję się w tworzeniu treści SEO, UX Writingu oraz optymalizacji stron internetowych. Pracuję na styku marketingu, technologii i doświadczeń użytkownika, pomagając firmom budować widoczność, porządkować komunikację i rozwijać sprzedaż online.
-</div>
-</section>
-
-<section class="contact reveal">
-<h2 class="section-title">Kontakt</h2>
-<p>Porozmawiajmy o Twoim projekcie.</p>
-<br>
-<a href="#">Useme</a>
-<a href="#">LinkedIn</a>
-<a href="mailto:kontakt@example.com">E‑mail</a>
-</section>
-
-<script>
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-}
-});
-});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
