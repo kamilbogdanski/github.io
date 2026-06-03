@@ -311,7 +311,39 @@ p {
         transform: translateY(0);
     }
 }
+/* --- SEKCJA CYTATU --- */
+.quote-section {
+    padding: 8rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.massive-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3rem, 7vw, 6.5rem); /* Skaluje się płynnie w zależności od ekranu */
+    line-height: 1.1;
+    font-weight: 400;
+    color: var(--text-main);
+    margin-bottom: 3rem;
+    letter-spacing: -0.04em;
+}
+
+/* Efekt grubego podkreślenia */
+.thick-underline {
+    display: inline-block;
+    border-bottom: 8px solid var(--text-main);
+    padding-bottom: 0.05em; /* Przysuwa podkreślenie bliżej liter */
+    line-height: 0.95;
+}
+
+.quote-description {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
 /* --- RESPONSIVNESS --- */
 @media (max-width: 768px) {
     .nav-links { display: none; }
