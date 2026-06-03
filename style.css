@@ -204,13 +204,16 @@ p {
 /* --- BENTO GRID (Usługi) --- */
 .services-section {
     padding: 6rem 0;
+} /* <-- TEGO NAWIASU BRAKOWAŁO */
+
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Wymusza dokładnie 3 równe kolumny */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
+
 .bento-large {
-    grid-column: auto; /* Resetuje rozciąganie trzeciego kafelka */
+    grid-column: auto;
 }
 
 .bento-card {
