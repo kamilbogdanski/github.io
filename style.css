@@ -480,6 +480,11 @@ p {
     margin: 0 auto;
     max-width: 95%; /* Żeby tekst nie dotykał samych krawędzi */
 }
+    /* --- PRZYCISK USEME W SEKCJI O MNIE --- */
+.useme-btn {
+    display: inline-block;
+    margin-top: 2.5rem;
+}
 * --- RESPONSIVNESS --- */
 @media (max-width: 768px) {
     /* Nawigacja: ukrywamy środkowe linki, zmniejszamy przycisk */
