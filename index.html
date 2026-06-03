@@ -3,138 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamil Bogdański | UX Writing & SEO Copywriting</title>
+    <title>Kamil Bogdański | UX Writing & SEO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <div class="bg-glow"></div>
+
     <nav class="navbar">
-        <div class="logo">KB</div>
+        <div class="logo">K/B</div>
         <ul class="nav-links">
-            <li><a href="#hero">Strona główna</a></li>
+            <li><a href="#hero">Start</a></li>
+            <li><a href="#services">Usługi</a></li>
             <li><a href="#about">O mnie</a></li>
-            <li><a href="#services">Co robię</a></li>
-            <li><a href="#values">Jak pracuję</a></li>
         </ul>
-        <a href="#contact" class="btn-outline">Contact us</a>
+        <a href="#contact" class="btn-glow">Rozpocznij projekt</a>
     </nav>
 
     <header id="hero" class="hero-section">
-        <div class="container hero-content">
-            <h1>Projektuję treści, które karmią algorytmy i inspirują ludzi</h1>
-            <p class="subtitle">W świecie zdominowanym przez generyczny content, stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI. Optymalizuję architekturę informacji i język korzyści – a wszystko po to, by Twoja komunikacja była płynna, skuteczna i zapamiętywalna.</p>
-            <a href="#about" class="btn-solid">Poznaj mnie</a>
+        <div class="container hero-content fade-in">
+            <span class="badge">Dostępny do współpracy</span>
+            <h1>Projektuję treści, które karmią algorytmy i inspirują ludzi.</h1>
+            <p>W świecie zdominowanym przez generyczny content, stawiam na jakość, którą docenią zarówno ludzie, jak i systemy AI. Optymalizuję architekturę informacji i język korzyści.</p>
         </div>
     </header>
 
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>UX WRITING</span> ✦ <span>SEO COPYWRITING</span> ✦ <span>AUDYTY TECHNICZNE</span> ✦ <span>CONTENT STRATEGY</span> ✦ 
+            <span>UX WRITING</span> ✦ <span>SEO COPYWRITING</span> ✦ <span>AUDYTY TECHNICZNE</span> ✦ <span>CONTENT STRATEGY</span> ✦
+        </div>
+    </div>
+
     <section id="services" class="services-section">
-        <div class="container text-center mb-large">
-            <span class="eyebrow">Moje usługi</span>
-            <h2>Skuteczna komunikacja to suma dopracowanych detali. Zobacz, jak mogę pomóc Twojej marce urosnąć</h2>
-        </div>
-        
-        <div class="container grid-3">
-            <article class="service-card">
-                <h3>UX Writing</h3>
-                <p>Świetny design przyciąga wzrok, ale to słowa prowadzą użytkownika za rękę. Pomagam markom wypełnić interfejs treścią, która jest intuicyjna, pomocna i ludzka – od microcopy na przyciskach, przez komunikaty błędów, aż po puste stany. Dbam o to, by Twój produkt brzmiał równie dopracowanie, jak wygląda. Dla marek, które nie zostawiają doświadczeń użytkownika przypadkowi.</p>
-                <a href="#" class="card-link">Dowiedz się więcej</a>
-            </article>
-
-            <article class="service-card">
-                <h3>SEO Copywriting</h3>
-                <p>Dobry copywriter SEO wie, gdzie ukryć frazę kluczową, by nie zakłócić przyjemności z czytania. Ja idę o krok dalej – tworzę ekosystem treści, który karmi algorytmy i inspiruje odbiorców. Pomagam Twojej marce rozkwitnąć w wynikach wyszukiwania, stawiając na jakość, która broni się sama. Bo najlepsze SEO to takie, którego czytelnik nigdy nie „poczuje”, ale Twoje statystyki – owszem.</p>
-                <a href="#" class="card-link">Poznaj moją metodykę</a>
-            </article>
-
-            <article class="service-card">
-                <h3>Audyty techniczne strony</h3>
-                <p>Nawet najpiękniejszy design nie obroni się bez technicznego zaplecza. Mój audyt uwzględnia przegląd trzech filarów: jakości treści, intuicyjności interfejsu oraz optymalizacji konwersji. Sprawdzam, czy Twoja marka komunikuje się jasno i czy użytkownik bez przeszkód dociera do celu. Eliminuję błędy, które kosztują Cię utratę klientów.</p>
-                <a href="#" class="card-link">Sprawdź zakres usług</a>
-            </article>
-        </div>
-    </section>
-
-    <section class="quote-section">
         <div class="container">
-            <span class="eyebrow">Dlaczego ja?</span>
-            <blockquote class="massive-quote">
-                Marketing to nie bitwa na produkty. To bitwa na percepcję <span class="author">— Al Ries</span>
-            </blockquote>
-            <p class="quote-description">Percepcja to suma wszystkich doświadczeń, jakie użytkownik ma z Twoją stroną. Od jasności komunikatu w procesie zakupu, po widoczność Twoich rozwiązań w sieci. Łączę technologiczną poprawność SEO z empatią UX Writingu, by Twój produkt po prostu zarabiał. Pomagam markom brzmieć profesjonalnie tam, gdzie liczy się każde kliknięcie.</p>
-        </div>
-    </section>
+            <h2 class="section-title">Co robię.</h2>
+            <div class="bento-grid">
+                <article class="bento-card fade-in">
+                    <div class="card-icon">01</div>
+                    <h3>UX Writing</h3>
+                    <p>Świetny design przyciąga wzrok, ale to słowa prowadzą użytkownika za rękę. Pomagam markom wypełnić interfejs treścią, która jest intuicyjna, pomocna i ludzka. Dla marek, które nie zostawiają doświadczeń przypadkowi.</p>
+                </article>
 
-    <section id="values" class="values-section bg-light">
-        <div class="container grid-3">
-            <div class="value-item">
-                <h4>6 lat praktyki</h4>
-                <p>Solidny fundament zbudowałem podczas pracy dla czołowych agencji digitalowych w Polsce. Swoje doświadczenie w obszarze SEO i strategii komunikacji zdobywałem w takich zespołach jak Semahead, Verseo, Trust Line, Euvic Digital oraz Harbingers. To tam uczyłem się, jak łączyć cele biznesowe z realnymi potrzebami użytkowników na ogromną skalę.</p>
-            </div>
-            <div class="value-item">
-                <h4>Synergia kompetencji</h4>
-                <p>Łączę UX i SEO, tworząc treści, które pracują na wielu poziomach równocześnie. W pracy wykorzystuję zaawansowane narzędzia AI – Claude Design, Google Gemini i ChatGPT. Jako pasjonat technologii, eksperymentuję również z produkcją muzyki w AI na własny użytek, co pozwala mi patrzeć na procesy kreatywne w sposób nieszablonowy i wielowymiarowy.</p>
-            </div>
-            <div class="value-item">
-                <h4>Podejście analityczne</h4>
-                <p>Wierzę, że liczby i piękno idą w parze. Przeprowadzając audyty stron www i aplikacji webowych, łączę chłodną analizę konwersji z pasją do designu. Nieustannie śledzę światowe trendy w UI i UX, dzięki czemu dostarczam rekomendacje, które są nowoczesne, aktualne i przede wszystkim skuteczne. To rzadka i ceniona kombinacja.</p>
-            </div>
-        </div>
-    </section>
+                <article class="bento-card fade-in" style="animation-delay: 0.2s;">
+                    <div class="card-icon">02</div>
+                    <h3>SEO Copywriting</h3>
+                    <p>Tworzę ekosystem treści, który karmi algorytmy i inspiruje odbiorców. Najlepsze SEO to takie, którego czytelnik nigdy nie „poczuje”, ale Twoje statystyki – owszem.</p>
+                </article>
 
-    <section id="about" class="about-section">
-        <div class="container flex-about">
-            <div class="about-text">
-                <h2>Odkryj i zbuduj ze mną potencjał swojej firmy</h2>
-                <p>Wykorzystaj moją wiedzę z zakresu UX, SEO i audytu treści, aby wzmocnić pozycję Twojej firmy na rynku. Tworzę rozwiązania, które pracują na Twój sukces 24/7, łącząc nowoczesną technologię z dbałością o każdy detal komunikacji. Zapraszam do współpracy - proste i przejrzyste zasady rozliczeń poprzez platformę Useme.</p>
-                <a href="#" class="btn-solid mt-4">Znajdź mnie na Useme.com</a>
-            </div>
-            <div class="about-image">
-                <img src="profile.jpg" alt="Kamil Bogdański - Portret" />
+                <article class="bento-card bento-large fade-in" style="animation-delay: 0.4s;">
+                    <div class="card-icon">03</div>
+                    <h3>Audyty techniczne</h3>
+                    <p>Mój audyt uwzględnia przegląd trzech filarów: jakości treści, intuicyjności interfejsu oraz optymalizacji konwersji. Sprawdzam, czy Twoja marka komunikuje się jasno i czy użytkownik bez przeszkód dociera do celu. Eliminuję błędy, które kosztują Cię utratę klientów i widoczności w sieci.</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <section class="standards-section text-center">
-        <div class="container">
-            <span class="eyebrow">Selective Hiring Standards</span>
-            <h2 class="mb-large">Wieloletnie doświadczenie poparte liczbami</h2>
-            
-            <div class="grid-3 standards-grid">
-                <div>
-                    <h3>Dyspozycyjność</h3>
-                    <p>Szybka decyzja i sprawna realizacja - bez szkody dla jakości</p>
-                </div>
-                <div>
-                    <h3>Rzetelność</h3>
-                    <p>Każdy tekst jest poprzedzony researchem i zweryfikowany</p>
-                </div>
-                <div>
-                    <h3>Zaufanie</h3>
-                    <p>Setki zrealizowanych zleceń, miliony napisanych znaków ze spacjami</p>
-                </div>
-            </div>
+    <section id="about" class="about-section container fade-in">
+        <div class="about-glass">
+            <h2>Odkryj i zbuduj ze mną potencjał firmy</h2>
+            <p>Łączę chłodną analizę konwersji z pasją do słowa. Wykorzystaj moją wiedzę z zakresu UX, SEO i audytu treści. Proste i przejrzyste zasady rozliczeń poprzez platformę Useme.</p>
         </div>
     </section>
 
     <footer id="contact" class="footer-section">
-        <div class="container footer-grid">
-            <div class="footer-cta">
-                <h2>Porozmawiajmy</h2>
-                <p>Nie wiesz, od czego zacząć? Pomogę.</p>
+        <div class="container">
+            <h2 class="footer-title">Gotowy na zmianę?</h2>
+            <div class="footer-links">
+                <a href="mailto:bogdanskikamil1@gmail.com" class="hover-underline">bogdanskikamil1@gmail.com</a>
+                <a href="tel:+48505909288" class="hover-underline">(+48) 505-909-288</a>
+                <a href="https://www.linkedin.com/in/kamilbogdanski/" target="_blank" class="hover-underline">LinkedIn</a>
             </div>
-            <div class="footer-contact">
-                <ul>
-                    <li><a href="tel:+48505909288">(+48) 505-909-288</a></li>
-                    <li><a href="mailto:bogdanskikamil1@gmail.com">bogdanskikamil1@gmail.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/kamilbogdanski/" target="_blank">linkedin.com/in/kamilbogdanski</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>Twój sukces w dobrych rękach</p>
         </div>
     </footer>
 
