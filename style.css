@@ -332,67 +332,69 @@ p {
         transform: translateY(0);
     }
 }
-/* --- SEKCJA CYTATU --- */
-/* --- SEKCJA CYTATU --- */
-.quote-section {
+/* --- SEKCJA CYTATU (Nowa, Kontrastowa V2) --- */
+.quote-section-v2 {
+    background-color: var(--text-main); /* Używamy czarnego tła z nagłówków */
+    color: var(--bg-base); /* Używamy jasnego tekstu (złamania bieli tła) */
+    padding: 10rem 0; /* Dużo oddechu z góry i dołu */
+    margin: 6rem 0;
     position: relative;
-    padding: 6rem 4rem;
-    margin: 4rem 0; /* Odstęp od innych sekcji */
-    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.7) 100%);
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 32px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     overflow: hidden;
 }
 
-/* Motyw 2026: Subtelna siatka kropek w tle sekcji */
-.quote-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
-    background-size: 30px 30px;
-    z-index: 0;
-    /* Maska sprawia, że kropki są widoczne tylko w centrum */
-    mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
-    -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+/* Cytat w foncie nagłówkowym Outfit */
+.massive-quote-v2 {
+    font-family: var(--font-heading); /* 'Outfit', sans-serif */
+    font-size: clamp(3.5rem, 8vw, 6rem); /* Potężny, bardzo duży rozmiar */
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    text-wrap: balance;
+    margin-bottom: 2.5rem;
+    color: #FFFFFF; /* Czysta biel dla maksymalnego kontrastu */
 }
 
-/* Zapewniamy, że tekst jest nad siatką */
-.massive-quote, .quote-description {
+/* Wyróżnione słowo "percepcję" */
+.marked-text {
     position: relative;
-    z-index: 1;
+    color: inherit;
+    /* Subtelne podkreślenie / wyróżnienie w tle */
+    background: linear-gradient(180deg,transparent 70%, rgba(255,255,255,0.15) 70%);
 }
 
-.massive-quote {
-    font-family: 'Playfair Display', serif; /* Font szeryfowy! */
-    font-size: clamp(3rem, 7vw, 6.5rem);
-    line-height: 1.1;
-    font-weight: 400;
-    color: var(--text-main);
-    margin-bottom: 3rem;
-    letter-spacing: -0.04em;
+/* Gruby, biały separator */
+.thick-white-line {
+    width: 150px;
+    height: 12px;
+    background-color: #FFFFFF;
+    margin: 0 auto 3.5rem auto; /* Wyśrodkowanie i odstęp od dołu */
+    border-radius: 4px;
 }
 
-/* Efekt grubego podkreślenia */
-.thick-underline {
-    display: inline-block;
-    border-bottom: 8px solid var(--text-main);
-    padding-bottom: 0.05em; /* Przysuwa podkreślenie bliżej liter */
-    line-height: 0.95;
-}
-
-.quote-description {
-    max-width: 850px;
+/* Opis pod cytatem w foncie maszynowym Courier Prime */
+.quote-description-v2 {
+    font-family: var(--font-body); /* 'Courier Prime', monospace */
+    color: #D1D1D1; /* Nieco przygaszony biały, by nie męczył wzroku */
+    font-size: 1.1rem;
+    max-width: 80ch; /* Limit znaków na linię dla czytelności (65-80 to standard) */
     margin: 0 auto;
-    font-size: 1.15rem;
-    line-height: 1.7;
+    letter-spacing: -0.02em;
 }
-/* --- RESPONSIVNESS --- */
+
+/* Responsywność dla nowej sekcji (na samym dole pliku) */
+@media (max-width: 768px) {
+    .quote-section-v2 { 
+        padding: 6rem 1.5rem !important; 
+    }
+    .massive-quote-v2 { 
+        font-size: 2.5rem !important; 
+    }
+    .thick-white-line { 
+        height: 8px; width: 100px; 
+    }
+    .quote-description-v2 { 
+        font-size: 1rem; 
+    }
 * --- RESPONSIVNESS --- */
 @media (max-width: 768px) {
     .nav-links { display: none; }
