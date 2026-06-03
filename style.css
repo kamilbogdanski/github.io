@@ -397,15 +397,49 @@ p {
     }
 * --- RESPONSIVNESS --- */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .navbar { padding: 1rem; }
-    .hero-section { padding-top: 10rem; }
-    .bento-card { padding: 2rem; }
+    /* Nawigacja: ukrywamy środkowe linki, zmniejszamy przycisk */
+    .nav-links { 
+        display: none !important; 
+    }
+    .navbar { 
+        padding: 0.8rem 1.2rem; 
+        width: 95%;
+    }
+    .btn-glow { 
+        padding: 0.5rem 1rem; 
+        font-size: 0.85rem; 
+    }
+
+    /* Hero: ukrywamy tło, by nie psuło czytelności na Safari */
+    .hero-thematic-bg { 
+        display: none !important; 
+    }
+    .hero-section { 
+        padding-top: 9rem; 
+        padding-bottom: 4rem;
+        min-height: auto;
+    }
+
+    /* Bento Grid: wymuszamy układ kafelków jeden pod drugim */
+    .bento-grid { 
+        grid-template-columns: 1fr !important; 
+    }
+    .bento-card { 
+        padding: 2rem; 
+    }
+
+    /* Cytat: skalujemy w dół */
+    .massive-quote { 
+        font-size: 2.2rem !important; 
+    }
+    .thick-underline { 
+        border-bottom-width: 4px !important; 
+    }
+    .quote-section {
+        padding: 4rem 1.5rem !important;
+    }
     
-    /* Naprawa kafelków na telefonach (jeden pod drugim) */
-    .bento-grid { grid-template-columns: 1fr; } 
-    
-    /* Pomniejszenie cytatu na telefonach, by nie wychodził za ekran */
-    .massive-quote { font-size: 2.5rem; }
-    .thick-underline { border-bottom-width: 4px; }
-}
+    /* Ogólne wyrównania dla mniejszych ekranów */
+    .container {
+        padding: 0 1.5rem;
+    }
