@@ -1,15 +1,15 @@
 /* --- ZMIENNE & RESET --- */
 :root {
-    --bg-base: #0a0a0a;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --text-main: #ffffff;
-    --text-muted: #a1a1aa;
-    --accent: #ffffff;
-    --accent-glow: rgba(255, 255, 255, 0.15);
+    --bg-base: #F4F4F5; /* Nowoczesna, kontrastująca złamana biel */
+    --card-bg: rgba(255, 255, 255, 0.7); /* Półprzezroczyste białe kafelki */
+    --card-border: rgba(0, 0, 0, 0.08); /* Subtelna, ciemna ramka */
+    --text-main: #09090B; /* Głęboka czerń dla nagłówków */
+    --text-muted: #52525B; /* Ciemnoszary dla akapitów (czcionka maszynowa) */
+    --accent: #000000;
+    --accent-glow: rgba(0, 0, 0, 0.1);
     
     --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Courier Prime', monospace; /* Czcionka maszynowa */
+    --font-body: 'Courier Prime', monospace; 
 }
 
 * {
@@ -31,14 +31,14 @@ body {
     position: relative;
 }
 
-/* Rozmyte tło dla dynamiki 3D */
+/* Subtelny cień tła w wersji jasnej */
 .bg-glow {
     position: fixed;
     top: -20%;
     left: -10%;
     width: 50vw;
     height: 50vw;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(255,255,255,0) 70%);
     filter: blur(80px);
     z-index: -1;
     pointer-events: none;
@@ -58,15 +58,16 @@ h1, h2, h3 {
     line-height: 1.1;
 }
 
+/* Ciemny gradient dla nagłówka głównego */
 h1 {
     font-size: clamp(3rem, 6vw, 5rem);
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #fff, #777);
+    background: linear-gradient(to right, #09090B, #52525B);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin-bottom: 2rem; color: var(--text-main); }
 h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); }
 
 p {
@@ -75,7 +76,7 @@ p {
     letter-spacing: -0.02em;
 }
 
-/* --- NAWIGACJA (Glassmorphism) --- */
+/* --- NAWIGACJA (Glassmorphism - wersja jasna) --- */
 .navbar {
     position: fixed;
     top: 1rem;
@@ -87,18 +88,20 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: rgba(10, 10, 10, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--card-border);
     border-radius: 100px;
     z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--text-main);
 }
 
 .nav-links {
@@ -126,12 +129,12 @@ p {
     font-family: var(--font-heading);
     font-weight: 700;
     transition: all 0.3s;
-    box-shadow: 0 0 20px var(--accent-glow);
+    box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .btn-glow:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* --- HERO --- */
@@ -155,6 +158,8 @@ p {
     margin-bottom: 1.5rem;
     font-family: var(--font-heading);
     background: var(--card-bg);
+    color: var(--text-main);
+    font-weight: 500;
 }
 
 /* --- MARQUEE (Dynamiczny pasek) --- */
