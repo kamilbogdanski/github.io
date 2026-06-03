@@ -395,6 +395,52 @@ p {
     .quote-description-v2 { 
         font-size: 1rem; 
     }
+    /* --- SEKCJA LICZB (UX METRICS) --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 równe kolumny */
+    gap: 1.5rem;
+    margin: 2rem 0 6rem 0; /* Odstępy od sąsiednich sekcji */
+}
+
+.metric-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* Subtelny mikro-efekt po najechaniu kurkiem myszy */
+.metric-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+/* Potężne cyfry w geometrycznym foncie Outfit */
+.metric-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(3.5rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.04em;
+}
+
+/* Etykiety w maszynowym foncie Courier Prime */
+.metric-label {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text-muted);
+    letter-spacing: -0.02em;
+}
 * --- RESPONSIVNESS --- */
 @media (max-width: 768px) {
     /* Nawigacja: ukrywamy środkowe linki, zmniejszamy przycisk */
