@@ -441,6 +441,45 @@ p {
     color: var(--text-muted);
     letter-spacing: -0.02em;
 }
+    /* --- SEKCJA WARTOŚCI (KAFELKI EDITORIAL) --- */
+.editorial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem; /* Duży odstęp dla zachowania oddechu */
+    margin: 4rem 0 8rem 0; /* Odstępy od innych sekcji */
+}
+
+.editorial-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.editorial-header {
+    background-color: #7A7A71; /* Zgaszony, oliwkowy grafit ze screena */
+    padding: 1.2rem 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Subtelny cień */
+}
+
+.editorial-header h4 {
+    color: #FFFFFF;
+    font-family: var(--font-heading); /* Outfit */
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.editorial-body p {
+    font-family: var(--font-body); /* Courier Prime */
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    text-align: center; /* Wyśrodkowanie tekstu jak na obrazku */
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 95%; /* Żeby tekst nie dotykał samych krawędzi */
+}
 * --- RESPONSIVNESS --- */
 @media (max-width: 768px) {
     /* Nawigacja: ukrywamy środkowe linki, zmniejszamy przycisk */
