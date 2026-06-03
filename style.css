@@ -191,16 +191,13 @@ p {
 /* --- BENTO GRID (Usługi) --- */
 .services-section {
     padding: 6rem 0;
-}
-
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Wymusza dokładnie 2 równe kolumny */
+    grid-template-columns: repeat(3, 1fr); /* Wymusza dokładnie 3 równe kolumny */
     gap: 1.5rem;
 }
-
 .bento-large {
-    grid-column: 1 / -1;
+    grid-column: auto; /* Resetuje rozciąganie trzeciego kafelka */
 }
 
 .bento-card {
@@ -231,10 +228,13 @@ p {
 
 .card-icon {
     font-family: var(--font-heading);
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.1);
     margin-bottom: 1rem;
+    /* Nowoczesny, przyciemniony znak wodny */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.05));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* --- O MNIE (Glass Panel) --- */
@@ -312,17 +312,44 @@ p {
     }
 }
 /* --- SEKCJA CYTATU --- */
+/* --- SEKCJA CYTATU --- */
 .quote-section {
-    padding: 8rem 0;
+    position: relative;
+    padding: 6rem 4rem;
+    margin: 4rem 0; /* Odstęp od innych sekcji */
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(245,245,245,0.7) 100%);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.03);
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+}
+
+/* Motyw 2026: Subtelna siatka kropek w tle sekcji */
+.quote-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
+    z-index: 0;
+    /* Maska sprawia, że kropki są widoczne tylko w centrum */
+    mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+    -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 70%);
+}
+
+/* Zapewniamy, że tekst jest nad siatką */
+.massive-quote, .quote-description {
+    position: relative;
+    z-index: 1;
 }
 
 .massive-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 7vw, 6.5rem); /* Skaluje się płynnie w zależności od ekranu */
+    font-family: 'Playfair Display', serif; /* Font szeryfowy! */
+    font-size: clamp(3rem, 7vw, 6.5rem);
     line-height: 1.1;
     font-weight: 400;
     color: var(--text-main);
