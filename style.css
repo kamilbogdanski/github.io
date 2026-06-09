@@ -487,51 +487,61 @@ p {
     display: inline-block;
     margin-top: 2.5rem;
 }
-* --- RESPONSIVNESS --- */
+/* --- RESPONSIVNESS (Kuloodporna wersja mobilna) --- */
 @media (max-width: 768px) {
-    /* Nawigacja: ukrywamy środkowe linki, zmniejszamy przycisk */
+    /* 1. Naprawa nawigacji - ukrywamy środkowe linki i pomniejszamy przycisk */
     .nav-links { 
         display: none !important; 
     }
     .navbar { 
-        padding: 0.8rem 1.2rem; 
-        width: 95%;
+        padding: 0.8rem 1.2rem !important; 
+        width: 95% !important; 
     }
     .btn-glow { 
-        padding: 0.5rem 1rem; 
-        font-size: 0.85rem; 
+        padding: 0.5rem 1rem !important; 
+        font-size: 0.85rem !important; 
     }
 
-    /* Hero: ukrywamy tło, by nie psuło czytelności na Safari */
+    /* 2. Ukrycie problematycznego tła na Safari */
     .hero-thematic-bg { 
         display: none !important; 
     }
     .hero-section { 
-        padding-top: 9rem; 
-        padding-bottom: 4rem;
-        min-height: auto;
+        padding-top: 9rem !important; 
+        padding-bottom: 4rem !important; 
+        min-height: auto !important; 
     }
 
-    /* Bento Grid: wymuszamy układ kafelków jeden pod drugim */
-    .bento-grid { 
+    /* 3. Naprawa wszystkich kafelków (Usługi, Liczby, Wartości) - jeden pod drugim */
+    .bento-grid, 
+    .metrics-grid, 
+    .editorial-grid { 
         grid-template-columns: 1fr !important; 
-    }
-    .bento-card { 
-        padding: 2rem; 
-    }
-
-    /* Cytat: skalujemy w dół */
-    .massive-quote { 
-        font-size: 2.2rem !important; 
-    }
-    .thick-underline { 
-        border-bottom-width: 4px !important; 
-    }
-    .quote-section {
-        padding: 4rem 1.5rem !important;
+        gap: 1.5rem !important; 
+        margin-bottom: 3rem !important;
     }
     
-    /* Ogólne wyrównania dla mniejszych ekranów */
-    .container {
-        padding: 0 1.5rem;
+    .bento-card, 
+    .metric-card { 
+        padding: 2rem 1.5rem !important; 
     }
+
+    /* 4. Skalowanie dużych fontów i cytatów */
+    h1 { font-size: 2.8rem !important; }
+    .massive-quote, 
+    .massive-quote-v2 { 
+        font-size: 2.2rem !important; 
+    }
+    .thick-white-line { width: 80px !important; height: 8px !important; }
+    
+    .quote-section, 
+    .quote-section-v2 { 
+        padding: 4rem 1.5rem !important; 
+        margin: 3rem 0 !important;
+    }
+
+    /* 5. Skalowanie stopki i separatora */
+    .footer-title { font-size: 3rem !important; margin-bottom: 2rem !important; }
+    .tools-separator { gap: 1rem !important; padding: 1.5rem 0 !important; }
+    .tool-item { font-size: 0.9rem !important; }
+}
