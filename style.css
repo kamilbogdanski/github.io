@@ -153,26 +153,24 @@ p {
     z-index: 2; /* Upewnia błąd, że tekst jest zawsze NAD obrazkiem */
 }
 
-/* Styl dla tematycznego tła */
+/* Styl dla tematycznego tła - Nowa wersja ze wzorem (Dot Grid) */
 .hero-thematic-bg {
     position: absolute;
-    top: 20%; /* Zaczyna się nieco niżej, pod nagłówkiem */
-    right: -5%;
-    width: 60vw;
-    height: 70%;
-    /* Podmień poniższy link na własną grafikę z repozytorium, np. url('grafika.png') */
-    background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-    opacity: 0.06; /* Bardzo niskie krycie (6%), delikatny znak wodny */
-    pointer-events: none; /* Ignoruje kliknięcia myszką */
-    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Wypełnia całą sekcję Hero */
     
-    /* Płynne wtopienie obrazka w tło strony (maskowanie) */
-    mix-blend-mode: multiply; /* Ładnie komponuje obrazek z jasnym tłem */
-    mask-image: radial-gradient(circle at right, black 30%, transparent 80%);
-    -webkit-mask-image: radial-gradient(circle at right, black 30%, transparent 80%);
+    /* Tworzy drobną siatkę kropek */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px);
+    background-size: 28px 28px; /* Rozmiar siatki (odstępy między kropkami) */
+    
+    z-index: 1;
+    pointer-events: none; /* Ignoruje kliknięcia myszką */
+    
+    /* Płynne zanikanie wzoru z góry na dół */
+    mask-image: linear-gradient(to bottom, black 20%, transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 95%);
 }
 
 /* --- STATYCZNY SEPARATOR NARZĘDZI --- */
