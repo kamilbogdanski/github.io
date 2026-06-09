@@ -285,8 +285,12 @@ p {
 
 .footer-title {
     font-size: clamp(3rem, 8vw, 7rem);
-    color: rgba(255, 255, 255, 0.05);
     margin-bottom: 3rem;
+    /* Zmieniamy z ledwo widocznego na mocny, ciemny gradient */
+    background: linear-gradient(to right, var(--text-main), var(--text-muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.03em;
 }
 
 .footer-links {
