@@ -493,7 +493,22 @@ p {
     display: inline-block;
     margin-top: 2.5rem;
 }
+/* --- CZARNY PASEK COPYRIGHT --- */
+.copyright-bar {
+    background-color: var(--text-main); /* Głęboka czerń z Twojej palety */
+    color: var(--bg-base); /* Jasny kolor tekstu */
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 4rem; /* Odstęp od wyższych elementów stopki */
+}
 
+.copyright-bar p {
+    font-family: var(--font-body); /* Maszynowa czcionka, idealna do notek prawnych */
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6); /* Przygaszona biel, by nie raziła w oczy */
+    margin: 0;
+    letter-spacing: 0.05em;
+}
 /* --- RESPONSIVNESS (Kuloodporna wersja mobilna) --- */
 @media (max-width: 768px) {
     /* 1. Naprawa nawigacji */
